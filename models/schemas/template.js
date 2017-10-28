@@ -24,6 +24,18 @@ const Mutation = `
     ): Post
 `;
 
+/* 
+    Every {name}.js file in the schema folder needs to export an object 
+    with the following properties (and only these properties):
+        Types
+        Query
+        Mutation
+    These will be merged to allow our schema to make one executable schema.
+    I suggest having a matching {name}.js in the resolver folder as well (for clarity)
+    The Query and Mutation function names need to match the names in the resolver {name}.js file
+    As such, these properties need to NEVER conflict in name
+*/
+
 module.exports = {
     Types,
     Query,

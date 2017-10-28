@@ -28,7 +28,28 @@ const Mutation = {
     }
 };
 
+const Author = {
+    posts: (author) => filter(posts, { authorId: author.id })
+};
+
+const Post = {
+    author: (post) => find(authors, { id: post.authorId })
+};
+
+/* 
+    Every {name}.js file in the resolvers folder needs to export an object 
+    with at LEAST the following properties:
+        Query 
+        Mutation
+    These will be merged to allow our resolvers to make one executable schema.
+    I suggest having a matching {name}.js in the schemas folder as well (for clarity)
+    The Query and Mutation function names need to match the names in the schema {name}.js file
+    Additional properties will be appended to allow graphql to resolve functions correctly
+    As such, these properties need to NEVER conflict in name
+*/
 module.exports = {
-    Query: {},
-    Mutation: {}
+    Query,
+    Mutation,
+    Author,
+    Post
 };
