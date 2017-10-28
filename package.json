@@ -4,8 +4,15 @@
   "description": "A simple graphql template with opinionated styling for nodejs",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretty": "prettier --write --tab-width 4 \"./**/*.js\"",
+    "test": "tape tests/**/*.js",
+    "precommit": "lint-staged"
   },
+  "lint-staged": [
+    "prettier --tab-width 4 --write",
+    "eslint --fix",
+    "git add"
+  ],
   "keywords": [
     "node",
     "graphql",
@@ -15,6 +22,9 @@
   "author": "Paul Sabatino",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.10.0"
+    "eslint": "^4.10.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4"
   }
 }
