@@ -1,0 +1,20 @@
+{
+  "name": "node_graphql_template",
+  "version": "0.1.0",
+  "description": "A simple graphql template with opinionated styling for nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "graphql",
+    "express",
+    "serverless"
+  ],
+  "author": "Paul Sabatino",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.10.0"
+  }
+}
