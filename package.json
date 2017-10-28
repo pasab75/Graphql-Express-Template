@@ -8,11 +8,13 @@
     "test": "tape tests/**/*.js",
     "precommit": "lint-staged"
   },
-  "lint-staged": [
-    "prettier --tab-width 4 --write",
-    "eslint --fix",
-    "git add"
-  ],
+  "lint-staged": {
+    "*.js": [
+      "prettier --tab-width 4 --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "keywords": [
     "node",
     "graphql",
@@ -26,5 +28,10 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
     "prettier": "^1.7.4"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql-tools": "^2.6.1"
   }
 }
