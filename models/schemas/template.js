@@ -1,4 +1,4 @@
-const TypeDefs = `
+const Types = `
     type Author {
         id: Int!
         firstName: String
@@ -13,7 +13,19 @@ const TypeDefs = `
     }
 `;
 
+const Query = `
+    posts: [Post]
+    author(id: Int!): Author
+`;
+
+const Mutation = `
+    upvotePost (
+        postId: Int!
+    ): Post
+`;
+
 module.exports = {
-    Query: query,
-    Mutation: mutation
+    Types,
+    Query,
+    Mutation
 };
