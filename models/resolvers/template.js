@@ -1,4 +1,4 @@
-import { find, filter } from "lodash";
+const { find, filter } = require("lodash");
 
 const authors = [
     { id: 1, firstName: "Tom", lastName: "Coleman" },
