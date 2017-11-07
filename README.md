@@ -34,3 +34,11 @@ module.exports ={
 ## Run the server
 
 npm start
+
+## Licensing
+
+MIT License
+
+Copyright (c) 2017 Paul Matthew Sabatino
+
+See License File
