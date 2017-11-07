@@ -5,6 +5,7 @@ const Types = `
         lastName: String
         posts: [Post] # the list of Posts by this author
     }
+    
     type Post {
         id: Int!
         title: String

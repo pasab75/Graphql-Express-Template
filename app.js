@@ -6,11 +6,13 @@ const graphqlExpress = require("apollo-server-express");
 const executableSchema = require("./models/executableSchema");
 const PORT = 3000;
 const app = express();
+
 app.use(
     "/graphql",
     bodyParser.json(),
     apolloExpress({ schema: executableSchema })
 );
+
 app.use("/graphiql", graphiqlExpress({ endpointURL: "/graphql" }));
 
 app.listen(PORT);
