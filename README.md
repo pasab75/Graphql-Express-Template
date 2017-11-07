@@ -1,9 +1,9 @@
-## An Express Graphql Template
+# An Express Graphql Template
 
 To use this project, first clone the project, npm install and type npm start.
 This will start the graphql and graphiql endpoints on Port 3000.
 
-# TypeDefs Files
+## TypeDefs Files
 
 Deposit all typeDef files in the typeDefs folder, under models
 Ensure no two typeDef files have the same name.
@@ -17,7 +17,7 @@ module.exports = {
 }
 ```
 
-# Resolver Files
+## Resolver Files
 
 Deposit the resolver files in the resolvers folder, under models
 Ensure that these do not have namespace conflicts, the deepAssign will attempt to help
@@ -31,6 +31,6 @@ module.exports ={
 }
 ```
 
-# Run the server
+## Run the server
 
 npm start
